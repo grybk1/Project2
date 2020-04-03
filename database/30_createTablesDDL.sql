@@ -8,9 +8,9 @@ CREATE TABLE public.movies
     title character varying(100) COLLATE pg_catalog."default" NOT NULL,		
     gross money NOT NULL,
     location character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    rating real NOT NULL,
+    rating character(10) NOT NULL,
     year integer NOT NULL,
-    plot character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    plot character varying(500) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT movies_pkey PRIMARY KEY (id)
 )
 

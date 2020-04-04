@@ -20,9 +20,9 @@ with open('zombie.csv', newline='') as csvfile:
     csv_header = next(csvreader)
 
     for row in csvreader:
-        response = requests.get(url + row[0] + api_key)
+        response = requests.get(url + row[1] + api_key)
 
-        response_json = response.json
+        response_json = response.json()
 
         try:
             title.append(response_json['Title'])
@@ -33,4 +33,3 @@ with open('zombie.csv', newline='') as csvfile:
             plot.append(response_json['Plot'])
         except:
             pass
-        

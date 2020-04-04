@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Zombie Movie Database</title>
+
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Creepster&display=swap" rel="stylesheet">
+ 
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="navbar-brand mb-0 h1"><h1>The Brain</h1>
+            <p class="lead">An interactive database full of the guts and gore of zombie movies through the decades.</p></span>
+    </nav>
+
+        <!-- LINE GRAPH -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                    
+                <img  src="images/ShaunoftheDead.jpg" alt=" ShaunoftheDead" class="image">
+                        
+            </div>
+            
+            <div class="col-md-6">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1>Zombies Through the Years</h1>
+                    <svg width="100" height="150">
+                        <script src="plot.js"></script>
+                       </svg>>
+                      <svg width="100" height="150">
+                       <script src="plot.js"></script>
+                      </svg>
+                    </div>
+                  </div>            
+           
+        </div>
+    </div>
+      
+
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                    <div class= "image">
+                <img src= "images/AmericanZombie.jpg" alt="American Zombie">
+
+            </div>
+
+            
+
+            </div>
+            <br>
+       <!-- TABLE -->
+            <div class="col-md-6">
+                <div class="jumbotron jumbotron-fluid">
+                
+                    <h1>Raw Data</h1>
+                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr><th>Title</th><th>Year</th><th>Director</th></tr>
+                        </thead>
+                            <tbody></tbody>
+                    </table>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        
+
+        <!-- DROP DOWN DECADE GRAPH -->
+    
+        <div class="col-md-6">
+            <div class="jumbotron jumbotron-fluid">
+                <h1>Graphs</h1>
+                  <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                  <svg width="100" height="150">
+                   <script src="plot.js"></script>
+                  </svg>
+                </div>
+              </div>
+
+        
+        <div class="col-md-6">
+                
+            <img  src="images/iWalkedWithaZombie.jpg" alt="American Zombie" class="image">
+                    
+        </div>
+    </div>
+</div>
+
+
+<!-- Heat Map -->
+
+<div class="col-md-12">
+    <div class="jumbotron jumbotron-fluid">
+        <h1>Heat Map</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <svg width="100" height="150">
+           <script src="plot.js"></script>
+          </svg>
+        </div>
+      </div>
+
+
+</div>
+</div>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="table.js"></script>
+
+
+</body>

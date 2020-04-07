@@ -17,16 +17,27 @@ connection = psycopg2.connect(user = "postgres",
 
 cursor = connection.cursor()
     # Print PostgreSQL Connection properties
-print ( connection.get_dsn_parameters(),"\n")
+
 
     # Print PostgreSQL version
 cursor.execute("SELECT version();")
 record = cursor.fetchone()
-print("You are connected to - ", record,"\n")
 
 cursor.execute("select * from public.movies")
 allData=cursor.fetchall()
 allData_df = pd.DataFrame(allData)
+
+cursor.execute('select C.name, count(*) from country C join xref_movie_country  on C.Id="countryId"  group by C.name  order by C.name')
+moviesByCountryData=cursor.fetchall()
+
+cursor.execute("select year, count(*) from movies group by year order by year")
+moviesByYearData=cursor.fetchall()
+
+cursor.execute("""select substring(year::text,1,3)||'0s', count(*) from movies
+group by substring(year::text,1,3)||'0s'
+order by substring(year::text,1,3)||'0s'""")
+moviesByDecadeData=cursor.fetchall()
+
 
 
 #print(allData)
@@ -44,10 +55,17 @@ def allMovies():
 #    return allData_df.to_json()
     return jsonify(allData)
 
-@app.route("/api/v1.0/all_df")
-def MoviesDf():
-#    return allData.to_json()
-    return allData
+@app.route("/api/v1.0/MoviesByCountry")
+def MoviesByCountry():
+    return jsonify(moviesByCountryData)
+
+@app.route("/api/v1.0/MoviesByYear")
+def moviesByYear():
+    return jsonify(moviesByYearData)
+
+@app.route("/api/v1.0/MoviesByDecade")
+def moviesByDecade():
+    return jsonify(moviesByDecadeData)    
 
 
 # 4. Define main behavior

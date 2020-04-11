@@ -1,12 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const url_bar = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByDecade";
 =======
+=======
+>>>>>>> master
 <<<<<<< HEAD
 const url_bar = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByDecade";
 =======
 const url_bar = "http://localhost:5000/api/v1.0/MoviesByDecade";
 >>>>>>> a237253b25a2082716bd7a39471538a95863f324
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 year = []
 count = []
@@ -44,7 +50,10 @@ d3.json(url_bar).then(function(data) {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 <<<<<<< HEAD
 =======
 // function init() {
@@ -73,6 +82,9 @@ d3.json(url_bar).then(function(data) {
 // }
 
 >>>>>>> a237253b25a2082716bd7a39471538a95863f324
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
@@ -81,8 +93,11 @@ function updatePlotly() {
 
     var dataset = dropdownMenu.property("value");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
     console.log(dataset)
   
@@ -91,21 +106,30 @@ function updatePlotly() {
 
     var dataInt = parseInt(dataset)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 =======
   
     var x = [];
     var y = [];
     var startYear = 1930;
 >>>>>>> a237253b25a2082716bd7a39471538a95863f324
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
     
         d3.json(url_line).then(function(data) {
             for (i=0;i<data.length;i++){
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
                 console.log(i)
                 if (data[i][0] >= dataInt && data[i][0] < dataInt+10) {
@@ -118,7 +142,10 @@ function updatePlotly() {
     })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 =======
                 if (startYear != data[i][0]) {
                     x.push(startYear)
@@ -185,6 +212,9 @@ console.log(y)
     Plotly.restyle("plot", "x", [x]);
     Plotly.restyle("plot", "y", [y]);
 >>>>>>> a237253b25a2082716bd7a39471538a95863f324
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }
 

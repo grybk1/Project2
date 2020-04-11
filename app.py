@@ -1,5 +1,6 @@
 import pandas as pd
 import psycopg2
+import os
 from sqlalchemy import create_engine
 #from info import username,password
 from boto.s3.connection import S3Connection
@@ -10,11 +11,11 @@ import numpy as np
 #from flask import Flask, jsonify
 from flask import Flask, render_template,jsonify
 
-connection = psycopg2.connect(os.environ['User'],
-                                  os.environ["Password"],
-                                  os.environ["host"],
-                                  os.environ["host"],
-                                  os.environ["database"])
+connection = psycopg2.connect(os.environ['DATABASE_URL'])
+                                #   os.environ["Password"],
+                                #   os.environ["host"],
+                                #   os.environ["host"],
+                                #   os.environ["database"])
 
 cursor = connection.cursor()
     # Print PostgreSQL Connection properties

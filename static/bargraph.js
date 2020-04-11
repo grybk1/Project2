@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
+const url_bar = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByDecade";
+=======
 const url_bar = "http://localhost:5000/api/v1.0/MoviesByDecade";
+>>>>>>> a237253b25a2082716bd7a39471538a95863f324
 year = []
 count = []
 
@@ -35,6 +39,8 @@ d3.json(url_bar).then(function(data) {
         Plotly.newPlot("plot", data, layout);
     }
 
+<<<<<<< HEAD
+=======
 // function init() {
 //     data = [{
 //         x: ["1930s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"],
@@ -60,20 +66,42 @@ d3.json(url_bar).then(function(data) {
 //     Plotly.newPlot("plot", data, layout);
 // }
 
+>>>>>>> a237253b25a2082716bd7a39471538a95863f324
 d3.selectAll("#selDataset").on("change", updatePlotly);
 
 function updatePlotly() {
     var dropdownMenu = d3.select("#selDataset");
 
     var dataset = dropdownMenu.property("value");
+<<<<<<< HEAD
+    console.log(dataset)
+  
+    var x = [];
+    var y = [];
+
+    var dataInt = parseInt(dataset)
+=======
   
     var x = [];
     var y = [];
     var startYear = 1930;
+>>>>>>> a237253b25a2082716bd7a39471538a95863f324
 
     
         d3.json(url_line).then(function(data) {
             for (i=0;i<data.length;i++){
+<<<<<<< HEAD
+                console.log(i)
+                if (data[i][0] >= dataInt && data[i][0] < dataInt+10) {
+                    x.push(data[i][0])
+                    y.push(data[i][1])
+                }
+            }console.log(x,y)
+            Plotly.restyle("plot", "x", [x]);
+            Plotly.restyle("plot", "y", [y]);
+    })
+
+=======
                 if (startYear != data[i][0]) {
                     x.push(startYear)
                     y.append(0)
@@ -138,6 +166,7 @@ console.log(y)
   
     Plotly.restyle("plot", "x", [x]);
     Plotly.restyle("plot", "y", [y]);
+>>>>>>> a237253b25a2082716bd7a39471538a95863f324
 }
 
 init();

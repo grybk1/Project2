@@ -1,13 +1,13 @@
 
 
-const url = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByYear";
+const url_line = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByYear";
 
 
 
 year = [],
 count = [],
 
-d3.json(url).then(function(data) {
+d3.json(url_line).then(function(data) {
     
     
     
@@ -28,7 +28,7 @@ d3.json(url).then(function(data) {
         title: "Zombie Movie Trend"
        };
 
-    Plotly.newPlot("linegraph", gdata, layout)
+    Plotly.newPlot("plot_line", gdata, layout)
 });
 
 console.log(year, count)

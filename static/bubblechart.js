@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 
 // const url = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByCountry";
 
 const url_bubble = "http://localhost:5000/api/v1.0/MoviesByCountry";
+=======
+const url_bubble = "https://fathomless-badlands-97675.herokuapp.com/api/v1.0/MoviesByCountry";
+>>>>>>> master
 
 
 

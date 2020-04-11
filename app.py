@@ -2,6 +2,7 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 #from info import username,password
+from boto.s3.connection import S3Connection
 
 
 import matplotlib.pyplot as plt
@@ -9,11 +10,11 @@ import numpy as np
 #from flask import Flask, jsonify
 from flask import Flask, render_template,jsonify
 
-connection = psycopg2.connect(user = "postgres",
-                                  password = "postgres",
-                                  host = "127.0.0.1",
-                                  port = "5432",
-                                  database = "monsters")
+connection = psycopg2.connect(os.environ['User'],
+                                  os.environ["Password"],
+                                  os.environ["host"],
+                                  os.environ["host"],
+                                  os.environ["database"])
 
 cursor = connection.cursor()
     # Print PostgreSQL Connection properties

@@ -12,6 +12,8 @@
 
   <link rel="stylesheet" href="/static/style.css">
 
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Creepster&display=swap" rel="stylesheet">
 
   
@@ -26,29 +28,77 @@
     </nav>
 
         <!-- LINE GRAPH -->
+        <h1>Zombies Through the Years</h1>
+        <div class="container">
+            <div class="row">        
+                <div class="col-md-6">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div id="plot_line"></div>
+                            <script src="/static/linegraph.js"></script>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <br>
+                    <br>
+                    <img  src="/static/images/iWalkedWithaZombie.jpg" alt="American Zombie" class="image">
+                </div>
+            </div>
+        </div>
 
+
+
+    <!-- Bubble Chart -->
+    <h1>Most Popular Filming Locations</h1>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                    
+                <br>
+                <br>
+                <br>
                 <img  src="/static/images/ShaunoftheDead.jpg" alt=" ShaunoftheDead" class="image">
                         
             </div>
             
             <div class="col-md-6">
                 <div class="jumbotron jumbotron-fluid">
-                    <h1>Zombies Through the Years</h1>
-                    
-                        <div id="linegraph">
-                        
-                        </div>
-                       
-                      
-                    </div>
+                    <div id="bubbleplot"></div>
+                        <script src="static/bubblechart.js"></script>
                   </div>            
            
         </div>
-    </div> 
+    </div>
+
+    <div class="container">
+        <div class="row">
+            
+    
+            <!-- DROP DOWN DECADE GRAPH -->
+        
+            <div class="col-lg-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1>Interactive Graph</h1>
+                    <div id="plot"></div>
+    
+                    <select id="selDataset">
+                        <option value="selector">Select a Decade</option>
+                        <option value="dataset1">1930s</option>
+                        <option value="dataset2">1940s</option>
+                        <option value="dataset3">1950s</option>
+                        <option value="dataset4">1960s</option>
+                        <option value="dataset5">1970s</option>
+                        <option value="dataset6">1980s</option>
+                        <option value="dataset7">1990s</option>
+                        <option value="dataset8">2000s</option>
+                        <option value="dataset9">2010s</option>
+                        <option value="dataset10">2020s</option>
+                      </select>
+                    
+                    <script src="/static/bargraph.js"></script>
+                </div>
+            </div>
+    
+    </div>
       
 <!-- 
       <div class="container">
@@ -122,10 +172,10 @@
 
 
 </div>
-</div>  --> --> -->
+</div>  --> 
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <!-- <script src="/static/table.js"></script> -->
-<script src="/static/linegraph.js"></script>
+<!-- <script src="/static/linegraph.js"></script> -->
 
 </body>

@@ -10,11 +10,11 @@ import numpy as np
 #from flask import Flask, jsonify
 from flask import Flask, render_template,jsonify
 
-connection = psycopg2.connect(os.environ['User'],
-                                  os.environ["Password"],
-                                  os.environ["host"],
-                                  os.environ["host"],
-                                  os.environ["database"])
+connection = psycopg2.connect(os.environ['URI'])
+                                #   os.environ["Password"],
+                                #   os.environ["host"],
+                                #   os.environ["port"],
+                                #   os.environ["database"])
 
 cursor = connection.cursor()
     # Print PostgreSQL Connection properties
